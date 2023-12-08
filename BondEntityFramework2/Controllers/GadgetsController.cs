@@ -19,18 +19,21 @@ namespace BondEntityFramework2.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            base.Dispose();
+            context.Dispose();
         }
 
         // GET: Gadgets
         public ActionResult Index()
         {
-            return View("Index");
+            List<GadgetModel> gadgets = context.Gadgets.ToList();
+
+            return View("Index", gadgets);
         }
 
         public ActionResult Details(int id)
         {
-            return View("Details");
+            GadgetModel gadget = context.Gadgets.SingleOrDefault(g => g.ID == id);
+            return View("Details", gadget);
         }
 
         public ActionResult Create()

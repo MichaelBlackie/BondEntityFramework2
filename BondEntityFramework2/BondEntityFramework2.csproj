@@ -175,6 +175,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312081020049_InitialState.cs" />
+    <Compile Include="Migrations\202312081020049_InitialState.designer.cs">
+      <DependentUpon>202312081020049_InitialState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312081543227_InitialState1.cs" />
+    <Compile Include="Migrations\202312081543227_InitialState1.designer.cs">
+      <DependentUpon>202312081543227_InitialState1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312081545265_FilllDatabase.cs" />
+    <Compile Include="Migrations\202312081545265_FilllDatabase.designer.cs">
+      <DependentUpon>202312081545265_FilllDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GadgetModel.cs" />
@@ -262,7 +274,7 @@
     <Content Include="Views\Gadgets\SearchResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -290,6 +302,17 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312081020049_InitialState.resx">
+      <DependentUpon>202312081020049_InitialState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312081543227_InitialState1.resx">
+      <DependentUpon>202312081543227_InitialState1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312081545265_FilllDatabase.resx">
+      <DependentUpon>202312081545265_FilllDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
